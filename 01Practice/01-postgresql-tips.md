@@ -4,7 +4,7 @@
 
 ## Objective
 
-Run the provided PostgreSQL monitoring queries and demonstrate that they work correctly.
+  Run the provided PostgreSQL monitoring queries and demonstrate that they work correctly.
 
 ---
 
