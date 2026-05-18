@@ -18,7 +18,6 @@ The goal is to practice advanced database concepts beyond basic CRUD operations 
 - Scheduled Refresh Jobs (bonus)
 
 The system should simulate a production-like fraud detection environment used in modern banking systems.
-
 ---
 
 # Business Scenario
