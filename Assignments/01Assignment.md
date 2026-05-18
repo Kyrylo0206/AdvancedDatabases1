@@ -1,4 +1,3 @@
-````md
 # Advanced PostgreSQL Assignment
 # Banking Fraud Monitoring System
 
