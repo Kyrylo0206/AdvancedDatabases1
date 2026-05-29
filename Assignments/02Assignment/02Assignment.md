@@ -1,4 +1,4 @@
-# Practical Assignment: PostgreSQL Performance Analysis and Optimization
+# Practical 02 Assignment: PostgreSQL Performance Analysis and Optimization
 
 ## Objective
 
@@ -113,7 +113,8 @@ LIMIT 100;
 ```
 
 -- Identify blocked sessions and their corresponding blocking sessions
-```SELECT
+```sql
+SELECT
 blocked.pid AS blocked_pid,
 blocked.usename AS blocked_user,
 blocked.query AS blocked_query,
@@ -129,7 +130,8 @@ ORDER BY blocked.pid;
 ```
 
 -- Detect long-running transactions that may be causing lock contention
-```SELECT
+```sql
+SELECT
 pid,
 usename,
 state,
@@ -142,7 +144,8 @@ ORDER BY xact_start;
 ```
 
 -- List active sessions currently waiting to acquire a lock
-```SELECT
+```sql
+SELECT
 pid,
 usename,
 state,
