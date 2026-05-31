@@ -199,7 +199,8 @@ Create a dashboard with at least:
 | Dashboard (Bonus)    |      2.5 |
 | **Total**            | **17.5** |
 
-```
+
+# Submission
 
 **Submission:** Databricks notebook(s), SQL queries, screenshots, and documentation.
-```
+
