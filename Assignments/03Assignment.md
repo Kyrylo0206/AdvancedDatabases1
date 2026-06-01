@@ -4,6 +4,9 @@
 
 Design and implement a simple Lakehouse architecture using Databricks Free Edition and Delta tables.
 
+❗ This assignment may be completed individually or in groups of up to three people. If you choose to work in a group, you must select a more complex dataset that contains at least eight distinct tables in the raw data layer.
+
+
 ---
 
 ## Dataset
