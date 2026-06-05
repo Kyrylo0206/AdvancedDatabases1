@@ -7,13 +7,13 @@ import psycopg2
 # CONFIGURATION AREA
 # Fill in your Kaggle API credentials and Database details below.
 # =================================================================
-KAGGLE_USERNAME = "YOUR_KAGGLE_USERNAME"
-KAGGLE_KEY = "YOUR_KAGGLE_KEY"
+KAGGLE_USERNAME = "kyryloshykhalov"
+KAGGLE_KEY = "KGAT_56e608c01b39550c93579a896605a423"
 
 DB_HOST = "localhost"
-DB_NAME = "YOUR_DB"
-DB_USER = "YOUR_DB_USER"
-DB_PASS = "YOUR_DB_PASSWORD"
+DB_NAME = "postgres"
+DB_USER = "admin"
+DB_PASS = ""
 DB_PORT = 5432
 
 

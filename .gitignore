@@ -1,0 +1,37 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+.idea/
+
+# Images (screenshots — commit manually if needed)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# Kaggle credentials (security)
+kaggle.json
+.kaggle/
+
+# Logs
+*.log
+
+# Compiled files
+*.class
+*.o
+*.so
