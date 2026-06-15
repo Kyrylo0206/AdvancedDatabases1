@@ -6,6 +6,3 @@ SELECT available_count
 FROM tickets
 WHERE event_id = 1;
 
--- Keep transaction open
-
--- COMMIT after the second SELECT

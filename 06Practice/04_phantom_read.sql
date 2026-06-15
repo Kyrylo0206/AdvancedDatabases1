@@ -6,6 +6,4 @@ SELECT COUNT(*)
 FROM reservations
 WHERE event_id = 1;
 
--- Keep transaction open
 
--- COMMIT after the second SELECT

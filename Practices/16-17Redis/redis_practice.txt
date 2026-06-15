@@ -1,0 +1,32 @@
+FLUSHDB
+
+# Task 1: User Sessions with TTL
+SET session:user:1 "username=alice;login=2026-06-14T10:00:00" EX 60
+SET session:user:2 "username=bob;login=2026-06-14T10:01:00" EX 60
+SET session:user:3 "username=emma;login=2026-06-14T10:02:00" EX 60
+
+GET session:user:1
+GET session:user:2
+GET session:user:3
+
+TTL session:user:1
+TTL session:user:2
+TTL session:user:3
+
+GET session:user:1
+TTL session:user:1
+
+SUBSCRIBE chat_room
+
+PUBLISH chat_room "Alice: Hello everyone"
+PUBLISH chat_room "Bob: Hi Alice"
+PUBLISH chat_room "Emma: Redis Pub/Sub works instantly"
+
+SET app:config "chat_enabled=true;version=1.0"
+GET app:config
+SAVE
+
+GET app:config
+
+CONFIG GET save
+CONFIG GET appendonly

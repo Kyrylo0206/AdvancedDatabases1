@@ -1,0 +1,51 @@
+# Assignment 04: Redis Commands
+# Run with redis-cli.
+
+FLUSHDB
+
+# Task 1: String Operations
+SET product:1:name "Wireless Keyboard"
+SET product:1:price "49.99"
+SET product:1:category "Electronics"
+
+GET product:1:name
+GET product:1:price
+GET product:1:category
+
+# Task 2: Hash Operations
+HSET product:2 name "USB-C Hub" price "34.50" category "Electronics" stock "120"
+HGETALL product:2
+HGET product:2 name
+HINCRBY product:2 stock -5
+HGETALL product:2
+
+# Task 3: List Operations
+RPUSH recent_orders order:1001 order:1002 order:1003 order:1004 order:1005 order:1006 order:1007 order:1008 order:1009 order:1010
+LRANGE recent_orders 0 -1
+LRANGE recent_orders -3 -1
+
+# Task 4: Set Operations
+SADD product_tags electronics keyboard wireless office sale new popular compact
+SADD product_tags electronics
+SMEMBERS product_tags
+SISMEMBER product_tags electronics
+SISMEMBER product_tags furniture
+
+# Task 5: Expiration TTL
+SET featured_product "product:1" EX 60
+GET featured_product
+TTL featured_product
+
+# Wait 60 seconds, then:
+GET featured_product
+TTL featured_product
+
+# Task 6: Cache Simulation
+SET cache:product:1001 '{"id":1001,"name":"Wireless Keyboard","price":49.99,"category":"Electronics","stock":80}' EX 120
+GET cache:product:1001
+TTL cache:product:1001
+
+# Bonus: Sorted Set Leaderboard
+ZADD sales_leaderboard 150 "Wireless Keyboard" 220 "USB-C Hub" 95 "Laptop Stand" 310 "Noise Cancelling Headphones" 175 "Webcam"
+ZREVRANGE sales_leaderboard 0 -1 WITHSCORES
+ZREVRANGE sales_leaderboard 0 0 WITHSCORES
